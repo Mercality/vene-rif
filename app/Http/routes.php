@@ -14,3 +14,13 @@
 $app->get('/', function () use ($app) {
     return $app->version();
 });
+
+$app->get('/calc', function (\Illuminate\Http\Request $request) use ($app) {
+    $rif = new App\Rif($request['ced']);
+    dd($rif->rif);
+
+    $ced = $request['ced'];
+
+
+
+});
